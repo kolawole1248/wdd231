@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Course home page for Web and Computer Programming Certificate">
+    <meta name="author" content="Rubia M. Francesco">
+    <title>Course Home Page</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
 </head>
 <body>
-    Hello world!!!
+    <header>
+        <img src="images/lar.jpg" alt="Rubia M. Francesco">
+        <span>Rubia M. Francesco</span>
+    </header>
+    <nav>
+        <button id="menu-button">☰</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">GitHub Profile</a></li>
+            <li><a href="#">LinkedIn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Home</h1>
+        <div class="grid-container">
+            <section>
+                <h2>Course Work</h2>
+                <button id="all-courses">All</button>
+                <button id="wdd-courses">WDD</button>
+                <button id="cse-courses">CSE</button>
+            </section>
+            <section>
+                <h2>Toloria, Madagascar</h2>
+                <p>Bablab Trees</p>
+            </section>
+            
+        </div>
+        <section>
+            <h2>Web and Computer Programming Certificate</h2>
+            <div id="course-list"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Rubia M. Francesco @ Madagascar</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
