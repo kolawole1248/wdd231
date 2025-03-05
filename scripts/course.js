@@ -1,39 +1,58 @@
-// Navigation Menu Toggle
-document.getElementById('menu-button').addEventListener('click', function() {
-    const navList = document.querySelector('nav ul');
-    navList.classList.toggle('open');
-});
+// Dynamically set the current year
+const currentYearSpan = document.getElementById("currentYear");
+currentYearSpan.textContent = new Date().getFullYear();
 
-// Dynamic Year and Last Modified Date
-document.getElementById('currentyear').textContent = new Date().getFullYear();
-document.getElementById('lastModified').textContent = document.lastModified;
+// Dynamically set the last modified date
+const lastModified = document.getElementById("lastModified");
+lastModified.textContent = `Last Update: ${document.lastModified}`;
 
-// Course Data and Filtering
+// Course data
 const courses = [
-    { code: 'CSE110', name: 'Programming Building Blocks', credits: 3, completed: true },
-    { code: 'WDD130', name: 'Web Fundamentals', credits: 3, completed: true },
-    { code: 'CSE111', name: 'Programming with Functions', credits: 3, completed: false },
-    { code: 'CSE210', name: 'Programming with Classes', credits: 3, completed: false },
-    { code: 'WDD131', name: 'Dynamic Web Fundamentals', credits: 2, completed: true },
-    { code: 'WDD231', name: 'Web Frontend Development', credits: 3, completed: false }
+  { code: "CSE 110", name: "Programming Basics", completed: true },
+  { code: "WDD 130", name: "Web Fundamentals", completed: true },
+  { code: "CSE 210", name: "Data Structures", completed: false },
+  { code: "WDD 131", name: "Responsive Web Design", completed: false },
+  { code: "CSE 111", name: "Algorithms", completed: false },
+  { code: "WDD 231", name: "Front-End Frameworks", completed: false }
 ];
 
-function displayCourses(filter = 'all') {
-    const courseList = document.getElementById('course-list');
-    courseList.innerHTML = '';
-    const filteredCourses = filter === 'all' ? courses : courses.filter(course => course.code.startsWith(filter));
-    filteredCourses.forEach(course => {
-        const courseDiv = document.createElement('div');
-        courseDiv.textContent = `${course.code}: ${course.name} (${course.credits} credits)`;
-        courseDiv.style.color = course.completed ? 'green' : 'red';
-        courseList.appendChild(courseDiv);
-    });
+// Display courses dynamically
+const coursesContainer = document.getElementById("courses");
+
+function displayCourses(filter = "all") {
+  coursesContainer.innerHTML = "";
+  const filteredCourses = courses.filter(course =>
+    filter === "all" ? true : course.code.startsWith(filter)
+  );
+  filteredCourses.forEach(course => {
+    const courseCard = document.createElement("div");
+    courseCard.className = `course-card ${course.completed ? "completed" : ""}`;
+    courseCard.textContent = `${course.code} - ${course.name}`;
+    coursesContainer.appendChild(courseCard);
+  });
 }
 
-// Event Listeners for Course Filter Buttons
-document.getElementById('all-courses').addEventListener('click', () => displayCourses('all'));
-document.getElementById('wdd-courses').addEventListener('click', () => displayCourses('WDD'));
-document.getElementById('cse-courses').addEventListener('click', () => displayCourses('CSE'));
+// Filter buttons
+document.getElementById("all").addEventListener("click", () => displayCourses("all"));
+document.getElementById("cse").addEventListener("click", () => displayCourses("CSE"));
+document.getElementById("wdd").addEventListener("click", () => displayCourses("WDD"));
 
-// Initial Display of Courses
+// Initial load
 displayCourses();
+
+
+// Wait for the DOM to fully load before running the script
+document.addEventListener('DOMContentLoaded', () => {
+  // Select the hamburger button and the nav menu
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  // Add a click event listener to the hamburger button
+  hamburger.addEventListener('click', () => {
+    // Toggle the 'active' class on the nav menu
+    navMenu.classList.toggle('active');
+  });
+});
+
+
+
