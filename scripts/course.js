@@ -2,22 +2,27 @@
 const currentYearSpan = document.getElementById("currentYear");
 currentYearSpan.textContent = new Date().getFullYear();
 
+// Dynamically set the current year
+const currentYearSpan = document.getElementById("currentYear");
+currentYearSpan.textContent = new Date().getFullYear();
+
 // Dynamically set the last modified date
 const lastModified = document.getElementById("lastModified");
 lastModified.textContent = `Last Update: ${document.lastModified}`;
 
 // Course data
 const courses = [
-  { code: "CSE 110", name: "Programming Basics", completed: true },
-  { code: "WDD 130", name: "Web Fundamentals", completed: true },
-  { code: "CSE 210", name: "Data Structures", completed: false },
-  { code: "WDD 131", name: "Responsive Web Design", completed: false },
-  { code: "CSE 111", name: "Algorithms", completed: false },
-  { code: "WDD 231", name: "Front-End Frameworks", completed: false }
+  { code: "CSE 110", name: "Programming Basics", credits: 3, completed: true },
+  { code: "WDD 130", name: "Web Fundamentals", credits: 3, completed: true },
+  { code: "CSE 210", name: "Data Structures", credits: 3, completed: false },
+  { code: "WDD 131", name: "Responsive Web Design", credits: 2, completed: false },
+  { code: "CSE 111", name: "Algorithms", credits: 3, completed: false },
+  { code: "WDD 231", name: "Front-End Frameworks", credits: 3, completed: false }
 ];
 
 // Display courses dynamically
 const coursesContainer = document.getElementById("courses");
+const totalCreditsSpan = document.getElementById("totalCredits");
 
 function displayCourses(filter = "all") {
   coursesContainer.innerHTML = "";
@@ -30,6 +35,10 @@ function displayCourses(filter = "all") {
     courseCard.textContent = `${course.code} - ${course.name}`;
     coursesContainer.appendChild(courseCard);
   });
+
+  // Calculate total credits
+  const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
+  totalCreditsSpan.textContent = totalCredits;
 }
 
 // Filter buttons
@@ -40,19 +49,8 @@ document.getElementById("wdd").addEventListener("click", () => displayCourses("W
 // Initial load
 displayCourses();
 
-
-// Wait for the DOM to fully load before running the script
-document.addEventListener('DOMContentLoaded', () => {
-  // Select the hamburger button and the nav menu
-  const hamburger = document.getElementById('hamburger');
+// Responsive navigation
+document.getElementById('hamburger').addEventListener('click', () => {
   const navMenu = document.getElementById('nav-menu');
-
-  // Add a click event listener to the hamburger button
-  hamburger.addEventListener('click', () => {
-    // Toggle the 'active' class on the nav menu
-    navMenu.classList.toggle('active');
-  });
+  navMenu.classList.toggle('active');
 });
-
-
-

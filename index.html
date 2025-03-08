@@ -8,10 +8,9 @@
     <meta name="author" content="Kolawole Uthman">
     <title>Kolawole Uthman Homepage</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
     <script src="scripts/course.js" defer></script>
-
 </head>
 
 <body>
@@ -21,17 +20,17 @@
             <h1>Kolawole Uthman</h1>
             <button class="hamburger" id="hamburger">☰</button>
         </div>
-        <nav>
+        <nav id="nav-menu">
             <ul>
-                <li><a href="index.html" class="active">Home hello</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="chamber/directory.html">Chamber</a></li>
-                <li><a href="chamber/directory.html">GitHub Profile</a></li>
+                <li><a href="https://github.com/yourusername">GitHub Profile</a></li>
                 <li><a href="https://www.linkedin.com/in/uthman-kolawole-2a807b1a1/">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="item">
+    <main>
         <section class="content-container">
             <div class="coursework">
                 <h2>Course Work</h2>
@@ -53,19 +52,14 @@
         <section class="certificate-section">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="buttons">
-                <button onclick="filterCourses('all')">All</button>
-                <button onclick="filterCourses('CSE')">CSE</button>
-                <button onclick="filterCourses('WDD')">WDD</button>
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
             </div>
-            <div class="courses">
-                <div class="course completed">CSE 110</div>
-                <div class="course">CSE 210</div>
-                <div class="course completed">WDD 130</div>
-                <div class="course">WDD 131</div>
-            </div>
+            <div id="courses" class="courses"></div>
+            <p>Total Credits: <span id="totalCredits">0</span></p>
         </section>
     </main>
-
 
     <footer>
         <p>&copy; <span id="currentYear"></span> Kolawole Uthman</p>
