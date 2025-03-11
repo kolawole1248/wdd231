@@ -1,0 +1,58 @@
+[
+    {
+        "name": "ABC Corp",
+        "address": "123 Main St, Ibadan, Nigeria",
+        "phone": "+234 123 456 7890",
+        "website": "http://www.abccorp.com",
+        "image": "abc_logo.png",
+        "membership_level": 3
+    },
+    {
+        "name": "XYZ Ltd",
+        "address": "456 Elm St, Ibadan, Nigeria",
+        "phone": "+234 987 654 3210",
+        "website": "http://www.xyzltd.com",
+        "image": "xyz_logo.png",
+        "membership_level": 2
+    },
+    {
+        "name": "PQR Enterprises",
+        "address": "789 Oak St, Ibadan, Nigeria",
+        "phone": "+234 555 666 7777",
+        "website": "http://www.pqrenterprises.com",
+        "image": "pqr_logo.png",
+        "membership_level": 1
+    },
+    {
+        "name": "LMN Services",
+        "address": "321 Pine St, Ibadan, Nigeria",
+        "phone": "+234 444 333 2222",
+        "website": "http://www.lmnservices.com",
+        "image": "lmn_logo.png",
+        "membership_level": 3
+    },
+    {
+        "name": "DEF Solutions",
+        "address": "654 Cedar St, Ibadan, Nigeria",
+        "phone": "+234 111 222 3333",
+        "website": "http://www.defsolutions.com",
+        "image": "def_logo.png",
+        "membership_level": 2
+    },
+    {
+        "name": "GHI Innovations",
+        "address": "987 Birch St, Ibadan, Nigeria",
+        "phone": "+234 888 999 0000",
+        "website": "http://www.ghiinnovations.com",
+        "image": "ghi_logo.png",
+        "membership_level": 1
+    },
+    {
+        "name": "JKL Enterprises",
+        "address": "159 Maple St, Ibadan, Nigeria",
+        "phone": "+234 777 888 9999",
+        "website": "http://www.jklenterprises.com",
+        "image": "jkl_logo.png",
+        "membership_level": 3
+    }
+]
