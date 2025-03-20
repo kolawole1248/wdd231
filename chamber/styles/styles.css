@@ -103,3 +103,45 @@ footer .container {
         margin-bottom: 10px;
     }
 }
+
+
+/* Hero Section Styling */
+/* Style the hero section */
+/* Hero Section Styling */
+.hero {
+    position: relative; /* Allows absolute positioning of the button */
+    display: block;
+    width: 100%; /* Ensures the image spans the full width */
+    height: 500px;
+    background-color: #f0f0f0;
+    overflow: hidden; /* Ensures no overflow occurs */
+    margin: 0;
+    padding: 0;
+}
+
+.hero img {
+    width: 100%; /* Makes the image stretch to cover the full space */
+    height: auto; /* Maintains the aspect ratio */
+    display: block;
+}
+
+/* Position the Keynote Tickets Button */
+.hero .cta-button {
+    position: absolute; /* Positions the button relative to the hero section */
+    bottom:  20px; /* Sets distance from the top */
+    right: 20px; /* Sets distance from the left */
+    padding: 10px 25px;
+    font-size: 16px;
+    text-decoration: none;
+    background-color: #0078d7; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 50px; /* Gives the button an oval shape */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 10; /* Ensures the button is displayed above the image */
+}
+
+.hero .cta-button:hover {
+    background-color: #0053a4; /* Darker blue on hover */
+}
