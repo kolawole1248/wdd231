@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Company One",
+        "address": "123 Main St, Timbuktu, Mali",
+        "phone": "(223) 555-1000",
+        "website": "https://companyone.com",
+        "image": "companyone.jpg",
+        "membershipLevel": 2
+    },
+    {
+        "name": "Company Two",
+        "address": "456 Elm St, Timbuktu, Mali",
+        "phone": "(223) 555-2000",
+        "website": "https://companytwo.com",
+        "image": "companytwo.jpg",
+        "membershipLevel": 3
+    },
+    {
+        "name": "Company Three",
+        "address": "789 Oak St, Timbuktu, Mali",
+        "phone": "(223) 555-3000",
+        "website": "https://companythree.com",
+        "image": "companythree.jpg",
+        "membershipLevel": 1
+    }
+]

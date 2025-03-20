@@ -1,4 +1,5 @@
 [
+
     {
         "name": "ABC Corp",
         "address": "123 Main St, Ibadan, Nigeria",
@@ -55,4 +56,6 @@
         "image": "jkl_logo.png",
         "membership_level": 3
     }
+
+    
 ]
