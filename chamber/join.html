@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join the Timbuktu Chamber of Commerce">
+    <meta name="author" content="Uthman">
+    <title>Join Timbuktu Chamber</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Timbuktu Chamber of Commerce</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Membership Application Form -->
+        <section class="membership-form">
+            <h2>Apply for Membership</h2>
+            <form action="thankyou.html" method="get">
+                <!-- Applicant's First Name -->
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" title="Your First Name" autocomplete="given-name" required>
+
+                <!-- Applicant's Last Name -->
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" title="Your Last Name" autocomplete="family-name" required>
+
+                <!-- Applicant's Organizational Title -->
+                <label for="org-title">Organizational Title</label>
+                <input type="text" id="org-title" name="organization-title" title="Your Organizational Title" autocomplete="organization-title" 
+                pattern="[A-Za-z\s\-]{7,}" placeholder="E.g., Manager" required>
+
+                <!-- Email Address -->
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" title="Your Email Address" autocomplete="email" placeholder="name@example.com" required>
+
+                <!-- Mobile Phone Number -->
+                <label for="mobile">Mobile Phone</label>
+                <input type="tel" id="mobile" name="mobile" title="Your Mobile Phone Number" autocomplete="tel" required>
+
+                <!-- Organization Name -->
+                <label for="organization">Organization Name</label>
+                <input type="text" id="organization" name="organization" title="Your Organization Name" autocomplete="organization" required>
+
+                <!-- Membership Level -->
+                <label for="membership-level">Membership Level</label>
+                <select id="membership-level" name="membership-level" title="Select Membership Level">
+                    <option value="np">NP Membership</option>
+                    <option value="bronze">Bronze Membership</option>
+                    <option value="silver">Silver Membership</option>
+                    <option value="gold">Gold Membership</option>
+                </select>
+
+                <!-- Organization Description -->
+                <label for="description">Organization Description</label>
+                <textarea id="description" name="description" title="Describe Your Organization"></textarea>
+
+                <!-- Timestamp (Hidden Field) -->
+                <input type="hidden" id="timestamp" name="timestamp" value="<?php echo date('Y-m-d H:i:s'); ?>">
+
+                <!-- Submit Button -->
+                <input type="submit" value="Submit Application">
+            </form>
+        </section>
+
+        <!-- Membership Level Cards -->
+        <section class="membership-cards">
+            <h2>Membership Benefits</h2>
+            <div class="cards">
+                <!-- NP Membership -->
+                <div class="card">
+                    <h3>NP Membership</h3>
+                    <button onclick="showModal('np-modal')">Learn More</button>
+                </div>
+                <!-- Bronze Membership -->
+                <div class="card">
+                    <h3>Bronze Membership</h3>
+                    <button onclick="showModal('bronze-modal')">Learn More</button>
+                </div>
+                <!-- Silver Membership -->
+                <div class="card">
+                    <h3>Silver Membership</h3>
+                    <button onclick="showModal('silver-modal')">Learn More</button>
+                </div>
+                <!-- Gold Membership -->
+                <div class="card">
+                    <h3>Gold Membership</h3>
+                    <button onclick="showModal('gold-modal')">Learn More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Level Modals -->
+        <div id="np-modal" class="modal">
+            <h3>NP Membership Benefits</h3>
+            <p>No fee. Includes basic events and networking.</p>
+            <button onclick="closeModal('np-modal')">Close</button>
+        </div>
+        <div id="bronze-modal" class="modal">
+            <h3>Bronze Membership Benefits</h3>
+            <p>Includes training sessions and event discounts.</p>
+            <button onclick="closeModal('bronze-modal')">Close</button>
+        </div>
+        <div id="silver-modal" class="modal">
+            <h3>Silver Membership Benefits</h3>
+            <p>Includes advertising opportunities and premium events.</p>
+            <button onclick="closeModal('silver-modal')">Close</button>
+        </div>
+        <div id="gold-modal" class="modal">
+            <h3>Gold Membership Benefits</h3>
+            <p>All benefits including exclusive networking and spotlight positions.</p>
+            <button onclick="closeModal('gold-modal')">Close</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Timbuktu Chamber of Commerce</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>

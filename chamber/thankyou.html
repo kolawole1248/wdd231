@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Thank You for Applying">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <h1>Thank You!</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <h2>We Appreciate Your Application</h2>
+        <p>Below is the information you submitted:</p>
+
+        <!-- Display Submitted Data -->
+        <div id="form-data">
+            <!-- Populated dynamically using JavaScript -->
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Timbuktu Chamber of Commerce</p>
+    </footer>
+
+    <script>
+        // Extract query parameters from URL
+        const queryParams = new URLSearchParams(window.location.search);
+
+        // Display submitted data
+        const formDataDiv = document.getElementById('form-data');
+        formDataDiv.innerHTML = `
+            <p><strong>First Name:</strong> ${queryParams.get('first-name')}</p>
+            <p><strong>Last Name:</strong> ${queryParams.get('last-name')}</p>
+            <p><strong>Organizational Title:</strong> ${queryParams.get('organization-title')}</p>
+            <p><strong>Email:</strong> ${queryParams.get('email')}</p>
+            <p><strong>Mobile Phone:</strong> ${queryParams.get('mobile')}</p>
+            <p><strong>Organization Name:</strong> ${queryParams.get('organization')}</p>
+            <p><strong>Membership Level:</strong> ${queryParams.get('membership-level')}</p>
+            <p><strong>Timestamp:</strong> ${queryParams.get('timestamp')}</p>
+        `;
+    </script>
+</body>
+</html>
