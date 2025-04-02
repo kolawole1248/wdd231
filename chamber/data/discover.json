@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Timbuktu Historic Mosque",
+        "address": "Main Street, Timbuktu, Mali",
+        "image": "images/mosque.webp",
+        "description": "One of the oldest mosques in Mali, dating back to the 14th century.",
+        "link": "https://example.com/mosque"
+    },
+    {
+        "name": "Sankore University",
+        "address": "Academic District, Timbuktu",
+        "image": "images/university.webp",
+        "description": "A historic center of learning known for its ancient manuscripts.",
+        "link": "https://example.com/university"
+    },
+    {
+        "name": "Timbuktu Museum",
+        "address": "Cultural Center, Timbuktu",
+        "image": "images/museum.webp",
+        "description": "A museum showcasing ancient artifacts and manuscripts from Mali's past.",
+        "link": "https://example.com/museum"
+    },
+    {
+        "name": "Djinguereber Library",
+        "address": "Historic District, Timbuktu",
+        "image": "images/library.webp",
+        "description": "A medieval library with thousands of ancient manuscripts dating back centuries.",
+        "link": "https://example.com/library"
+    },
+    {
+        "name": "Timbuktu Market",
+        "address": "Central Square, Timbuktu",
+        "image": "images/market.webp",
+        "description": "A vibrant marketplace where traders sell crafts, spices, and handmade textiles.",
+        "link": "https://example.com/market"
+    },
+    {
+        "name": "Sidi Yahya Mosque",
+        "address": "Old Town, Timbuktu",
+        "image": "images/sidiyahya.webp",
+        "description": "A sacred mosque known for its architectural beauty and deep historical significance.",
+        "link": "https://example.com/sidiyahya"
+    },
+    {
+        "name": "Timbuktu Port",
+        "address": "Niger River, Timbuktu",
+        "image": "images/port.webp",
+        "description": "An essential river port facilitating trade and transportation in Mali.",
+        "link": "https://example.com/port"
+    },
+    {
+        "name": "Ahmed Baba Institute",
+        "address": "Research District, Timbuktu",
+        "image": "images/ahmedbaba.webp",
+        "description": "A major research center dedicated to preserving Mali's rich literary heritage.",
+        "link": "https://example.com/ahmedbaba"
+    }
+]

@@ -1,0 +1,156 @@
+/* Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #88B04B;
+    --secondary-color: #F5F5DC;
+    --accent1-color: #333333;
+    --accent2-color: #FF6347;
+    --heading-font: 'Poppins', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
+    --nav-background-color: #88B04B;
+    --nav-link-color: #FFFFFF;
+    --nav-hover-link-color: #F5F5DC;
+    --nav-hover-background-color: #4A782B;
+}
+
+body {
+    font-family: var(--paragraph-font);
+    max-width: 960px;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header h1, header h2 {
+    color: white;
+}
+
+p {
+    padding: 25px;
+}
+
+nav {
+    background-color: var(--nav-background-color);
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+.colors {
+    width: 100%;
+    min-width: 350px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.colors th {
+    background-color: #999;
+}
+
+.colors td {
+    width: 25%;
+    height: 3em;
+}
+
+.primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.secondary {
+    background-color: var(--secondary-color);
+}
+
+.accent1 {
+    background-color: var(--accent1-color);
+    color: white;
+}
+
+.accent2 {
+    background-color: var(--accent2-color);
+}
+
+.colored {
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    border-left: 5px solid var(--primary-color);
+    padding: 10px;
+}
+
+.sitemap {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 3em 1.5em 1.5em;
+    grid-template-areas: 
+        ". . home home . ."
+        ". . . . . ."
+        "page2 page2 . . page3 page3";
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.sm-home {
+    grid-area: home;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page2 {
+    grid-area: page2;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.sm-page3 {
+    grid-area: page3;
+    background-color: #ccc;
+    line-height: 3em;
+}
+
+.top {
+    grid-row: 2;
+    grid-column: 1/7;
+    border-top: 1px solid;
+}
+
+.left {
+    grid-row: 3;
+    grid-column: 1/4;
+    border-top: 1px solid;
+    border-left: 1px solid;
+}
+
+.right {
+    grid-row: 3;
+    grid-column: 4/7;
+    border-top: 1px solid;
+    border-right: 1px solid;
+}

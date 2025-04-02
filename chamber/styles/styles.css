@@ -193,3 +193,62 @@ footer .container {
     }
 }
 
+
+
+/* Discover Page Grid Layout */
+.discover-grid {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Small Screens (1 Column) */
+@media screen and (max-width: 640px) {
+    .discover-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Medium Screens (2 Columns) */
+@media screen and (min-width: 641px) and (max-width: 1024px) {
+    .discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Large Screens (4 Columns) */
+@media screen and (min-width: 1025px) {
+    .discover-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Card Styling */
+.discover-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.discover-card img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect (Not for Mobile) */
+@media screen and (min-width: 641px) {
+    .discover-card img:hover {
+        transform: scale(1.1);
+    }
+}
+
+/* Visitor Message */
+.visitor-message {
+    text-align: center;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
