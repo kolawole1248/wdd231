@@ -1,0 +1,36 @@
+/* Mobile-specific styles */
+@media (max-width: 640px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+    
+    .search-container {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    #search-input,
+    #search-btn {
+        width: 100%;
+    }
+    
+    .filters {
+        grid-template-columns: 1fr;
+    }
+    
+    .filter-group {
+        margin-bottom: 1rem;
+    }
+    
+    #apply-filters {
+        width: 100%;
+    }
+    
+    .recipe-form {
+        padding: 1rem;
+    }
+    
+    .modal-content {
+        padding: 1rem;
+    }
+}

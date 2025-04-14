@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Submitted | RecipeRadar</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/logo.webp">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.webp" alt="RecipeRadar Logo" width="50" height="50" loading="lazy">
+            <h1>RecipeRadar</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse Recipes</a></li>
+                <li><a href="submit.html">Submit Recipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="confirmation">
+            <h2>Thank You for Your Submission!</h2>
+            <p>Your recipe has been saved to your local collection.</p>
+            <div id="recipe-display">
+                <!-- Recipe details will be inserted here -->
+            </div>
+            <a href="browse.html" class="btn btn-primary">Browse Recipes</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> RecipeRadar</p>
+        <a href="attributions.html">Attributions</a>
+    </footer>
+
+    <script>
+        // Display the submitted recipe from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const recipeDisplay = document.getElementById('recipe-display');
+            const lastRecipe = JSON.parse(localStorage.getItem('lastSubmittedRecipe'));
+            
+            if (lastRecipe) {
+                recipeDisplay.innerHTML = `
+                    <h3>${lastRecipe.name}</h3>
+                    ${lastRecipe.image ? `<img src="${lastRecipe.image}" alt="${lastRecipe.name}" style="max-width: 100%; height: auto; margin: 1rem 0;">` : ''}
+                    <p><strong>Preparation Time:</strong> ${lastRecipe.time} minutes</p>
+                    <div class="ingredients">
+                        <h4>Ingredients</h4>
+                        <ul>
+                            ${lastRecipe.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                        </ul>
+                    </div>
+                `;
+                
+                // Clear after display
+                localStorage.removeItem('lastSubmittedRecipe');
+            } else {
+                recipeDisplay.innerHTML = '<p>No recent recipe submission found.</p>';
+            }
+            
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+</body>
+</html>

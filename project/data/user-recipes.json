@@ -1,0 +1,34 @@
+[
+    {
+      "id": "user-1",
+      "title": "Vegetable Stir Fry",
+      "image": "",
+      "readyInMinutes": 20,
+      "servings": 2,
+      "ingredients": [
+        "1 bell pepper, sliced",
+        "1 carrot, julienned",
+        "1 cup broccoli florets",
+        "2 tbsp soy sauce",
+        "1 tbsp sesame oil"
+      ],
+      "instructions": "1. Heat oil in a wok or large skillet\n2. Add vegetables and stir fry for 5 minutes\n3. Add soy sauce and cook for 2 more minutes\n4. Serve hot with rice",
+      "diets": ["vegetarian"]
+    },
+    {
+      "id": "user-2",
+      "title": "Classic Pancakes",
+      "image": "",
+      "readyInMinutes": 15,
+      "servings": 4,
+      "ingredients": [
+        "1 cup all-purpose flour",
+        "2 tbsp sugar",
+        "2 tsp baking powder",
+        "1 cup milk",
+        "1 egg"
+      ],
+      "instructions": "1. Mix dry ingredients\n2. Add wet ingredients and whisk\n3. Cook on a griddle until bubbles form\n4. Flip and cook other side",
+      "diets": ["vegetarian"]
+    }
+  ]

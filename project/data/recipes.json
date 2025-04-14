@@ -1,0 +1,52 @@
+{
+    "recipes": [
+      {
+        "id": 1,
+        "title": "Vegetable Stir Fry",
+        "image": "images/stirfry.webp",
+        "readyInMinutes": 20,
+        "servings": 2,
+        "diets": ["vegetarian"],
+        "ingredients": [
+          "1 bell pepper, sliced",
+          "1 carrot, julienned",
+          "1 cup broccoli florets",
+          "2 tbsp soy sauce"
+        ],
+        "instructions": "1. Heat oil in pan\n2. Add vegetables\n3. Stir fry for 5 minutes\n4. Add sauce and serve"
+      },
+      {
+        "id": 2,
+        "title": "Classic Pancakes",
+        "image": "images/pancakes.webp",
+        "readyInMinutes": 15,
+        "servings": 4,
+        "diets": ["vegetarian"],
+        "ingredients": [
+          "1 cup flour",
+          "1 cup milk",
+          "1 egg",
+          "2 tbsp sugar"
+        ],
+        "instructions": "1. Mix dry ingredients\n2. Add wet ingredients\n3. Cook on griddle"
+      },
+      {
+        "id": 3,
+        "title": "Chicken Curry",
+        "image": "images/curry.webp",
+        "readyInMinutes": 40,
+        "servings": 4,
+        "diets": ["gluten-free"],
+        "ingredients": [
+          "2 chicken breasts",
+          "1 onion",
+          "1 can coconut milk",
+          "2 tbsp curry powder"
+        ],
+        "instructions": "1. Brown chicken\n2. Add vegetables\n3. Simmer with sauce"
+      }
+    ]
+  }
+
+
+  

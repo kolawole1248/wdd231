@@ -1,0 +1,15 @@
+/* Desktop-specific styles */
+@media (min-width: 1025px) {
+    .filters {
+        grid-template-columns: 2fr 1fr 1fr auto;
+        align-items: flex-end;
+    }
+    
+    .recipe-form {
+        padding: 3rem;
+    }
+    
+    .modal-content {
+        padding: 3rem;
+    }
+}
